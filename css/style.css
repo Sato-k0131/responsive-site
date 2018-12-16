@@ -14,19 +14,15 @@ body {
   background-color: #fdfcf6; }
 
 a {
-  color: #14c0c9;
   text-decoration: none; }
-  a:visited {
-    color: #0f949b; }
-  a:hover {
-    color: #0f949b; }
-  a:active {
-    color: #16d6e0; }
 
 /* Align
 ------------------------------------------------------------*/
 .text-center {
   text-align: center; }
+
+.text-left {
+  text-align: left; }
 
 /* Layout
 ------------------------------------------------------------*/
@@ -45,14 +41,18 @@ a {
 
 /* Header
 ------------------------------------------------------------*/
-img {
-  max-width: 100%;
-  display: block; }
+.bgimg {
+  display: block;
+  background-image: url("../img/img_xmas.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
 
 /* Main
 ------------------------------------------------------------*/
 section {
-  padding: 60px 0; }
+  padding: 40px 0; }
   section .container {
     width: 90%; }
   section h2 {
@@ -66,18 +66,72 @@ section {
   flex-direction: column; }
 #txt h2 {
   color: #4c4c4c;
-  margin-bottom: 60px; }
+  margin-bottom: 20px; }
+#txt table {
+  width: 100%; }
+#txt th, #txt td {
+  display: block; }
+#txt th {
+  padding: 10px 0;
+  color: #fdfcf6;
+  font-size: 3.2rem;
+  background-color: #98010b; }
+#txt td {
+  padding: 20px;
+  min-height: 130px;
+  background-color: #efdadb; }
 #txt .box {
   -webkit-flex: 1;
   flex: 1;
-  margin: 10px 0;
-  padding: 20px;
-  background-color: #e2455d;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  padding: 10px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: #98010b;
+  padding: 50px 0;
+  text-align: center;
+  color: #fdfcf6; }
+  footer .button {
+    display: inline-block;
+    width: 250px;
+    padding: 5px 0;
+    margin-top: 10px;
+    background-color: #cab164;
+    font-weight: bold;
+    color: #4c4c4c;
+    border-radius: 3px; }
+
+@media (min-width: 769px) {
+  /* Header
+  ------------------------------------------------------------*/
+  .bgimg {
+    height: 500px; }
+
+  /* Main
+  ------------------------------------------------------------*/
+  section {
+    padding: 60px 0; }
+
+  #txt .container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-direction: row;
+    flex-direction: row; }
+  #txt h2 {
+    margin-bottom: 50px; }
+  #txt th {
+    padding: 30px 0; }
+  #txt td {
+    padding: 20px;
+    min-height: 300px; }
+  #txt .box {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 0 10px; } }
 
 /*# sourceMappingURL=style.css.map */
